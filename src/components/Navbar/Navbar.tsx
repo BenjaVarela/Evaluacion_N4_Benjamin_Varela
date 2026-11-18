@@ -1,10 +1,12 @@
 import { useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { navegacion } from '../../data/portfolioData';
+import { useTheme } from '../../context/ThemeContext';
 import type { MenuKeyEvent } from '../../types';
 import './Navbar.css';
 
 export function Navbar() {
+  const { tema, cambiarTema } = useTheme();
   const [abierto, setAbierto] = useState<boolean>(false);
   const botonMenu = useRef<HTMLButtonElement>(null);
 
@@ -34,6 +36,10 @@ export function Navbar() {
             </li>
           ))}
         </ul>
+        <button className="navbar__theme" type="button" onClick={cambiarTema}
+          aria-label="Modo oscuro" aria-pressed={tema === 'oscuro'}>
+          Modo oscuro
+        </button>
       </nav>
     </header>
   );

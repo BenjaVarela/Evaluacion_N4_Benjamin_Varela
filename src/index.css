@@ -11,6 +11,16 @@
   --foco: #172b70;
   color-scheme: light;
 }
+:root[data-tema='oscuro'] {
+  --fondo: #161e32;
+  --texto: #f4f6ff;
+  --principal: #d2dfff;
+  --secundario: #263665;
+  --tarjeta: #222e48;
+  --error: #ffb6bf;
+  --foco: #ffdf7e;
+  color-scheme: dark;
+}
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { background: var(--fondo); color: var(--texto); line-height: 1.6; }
 button, input, textarea, select { font: inherit; }
