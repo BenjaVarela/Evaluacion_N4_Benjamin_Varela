@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import { Navbar } from './components/Navbar/Navbar';
+import { useTheme } from './context/ThemeContext';
 import { navegacion, perfil } from './data/portfolioData';
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
@@ -17,9 +18,17 @@ function Footer() {
 }
 
 function Layout() {
+  const { tema } = useTheme();
   const { pathname } = useLocation();
   const contenido = useRef<HTMLElement>(null);
   const rutaAnterior = useRef(pathname);
+
+  useEffect(() => {
+    document.documentElement.dataset.tema = tema;
+    return () => {
+      delete document.documentElement.dataset.tema;
+    };
+  }, [tema]);
 
   useEffect(() => {
     const ruta = pathname === '/' ? '/' : pathname.replace(/\/+$/, '').toLowerCase();

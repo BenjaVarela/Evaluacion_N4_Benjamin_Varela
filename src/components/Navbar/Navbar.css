@@ -2,6 +2,8 @@
 .navbar__content { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding: 1rem 5%; }
 .navbar__logo { font-weight: bold; font-size: 1.2rem; text-decoration: none; color: var(--principal); }
 .navbar__menu { border: 1px solid var(--principal); border-radius: 6px; background: var(--tarjeta); color: var(--principal); padding: 7px 10px; }
+.navbar__theme { border: 1px solid var(--principal); border-radius: 6px; background: var(--tarjeta); color: var(--principal); padding: 7px 10px; }
+.navbar__theme[aria-pressed='true'] { border-width: 2px; font-weight: 700; }
 .navbar__links { display: none; width: 100%; list-style: none; gap: 12px; order: 4; }
 .navbar__links--open { display: flex; flex-direction: column; }
 .navbar__link { display: inline-block; text-decoration: none; color: var(--principal); font-weight: 600; padding: 6px 0; }
