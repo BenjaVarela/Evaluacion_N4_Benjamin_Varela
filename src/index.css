@@ -35,7 +35,6 @@ button, a, input, textarea, select { -webkit-tap-highlight-color: transparent; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
 
-/* Hero */
 .hero { text-align: center; padding: 3rem 5%; }
 .hero__photo { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 4px solid var(--principal); margin-bottom: 1rem; transition: transform .3s; }
 .hero__photo:hover { transform: scale(1.05) rotate(3deg); }
@@ -46,7 +45,6 @@ button, a, input, textarea, select { -webkit-tap-highlight-color: transparent; }
   .hero__title { font-size: 2.5rem; }
 }
 
-/* Projects */
 .projects { padding: 4rem 5%; background: var(--secundario); text-align: center; color: #fff; }
 .projects__title { margin-bottom: 1.5rem; font-size: 2rem; }
 .projects__grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; max-width: 1000px; margin: 0 auto; list-style: none; }
@@ -58,7 +56,6 @@ button, a, input, textarea, select { -webkit-tap-highlight-color: transparent; }
 .repositories__status { margin: 1rem 0 1.5rem; }
 .repositories__status[role='alert'] { color: var(--error); }
 
-/* ContactForm */
 .contact { padding: 4rem 5%; text-align: center; }
 .contact__title { margin-bottom: 2rem; color: var(--principal); font-size: 1.5rem; }
 .contact__form { max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; text-align: left; }
@@ -71,5 +68,4 @@ button, a, input, textarea, select { -webkit-tap-highlight-color: transparent; }
 .contact__confirmation { color: var(--principal); font-weight: 600; }
 .contact__error:empty, .contact__confirmation:empty { margin: 0; }
 
-/* Footer */
 .footer { text-align: center; padding: 1.5rem; background: #182446; color: #fff; }
